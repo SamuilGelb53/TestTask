@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f964958046ab94d9168e5532cc940b, type: 3}
+  m_Name: ThirdTower
+  m_EditorClassIdentifier: 
+  _buildPrice: 75
+  _range: 10
+  _shotInterval: 0.8
+  _damage: 10
+  _bullet: {fileID: 289982261694986796, guid: f61eb817d927eff478eb59c9cafbf9dd, type: 3}
+  _tower: {fileID: 1303852803058361081, guid: 050ae260eac6eb04d979707fd01cb8bf, type: 3}
+  _bulletSpeed: 19
+  _whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 256
+  _nextLevel: {fileID: 11400000, guid: 1113d42df4ee7254db4eb9737f04fd8f, type: 2}
