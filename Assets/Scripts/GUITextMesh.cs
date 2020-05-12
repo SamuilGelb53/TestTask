@@ -21,6 +21,9 @@ public class GUITextMesh : MonoBehaviour
     [SerializeField] public BuildPoint _currentPoint;
     [Tooltip("Отображение кнопок улучшения/удаления")]
     [SerializeField] private bool _activeUpgrade;
+    [Tooltip("Important layers")]
+    [SerializeField] public LayerMask _layerMask;
+
     public bool _ActiveUpgrade
     {
         get { return _activeUpgrade; }
@@ -58,8 +61,6 @@ public class GUITextMesh : MonoBehaviour
 
     void Update()
     {
-        //Определяем важные слои
-        int layer_mask = (1 << 9)|(1<<8);
         //При клике
         if (Input.GetButtonDown("Fire1"))
         {
@@ -69,7 +70,7 @@ public class GUITextMesh : MonoBehaviour
                 Ray _ray = _cam.ScreenPointToRay(_vec);
                 RaycastHit _hit;
                 //Пускаем луч в сцену от камеры
-                if (Physics.Raycast(_ray, out _hit, Mathf.Infinity, layer_mask))
+                if (Physics.Raycast(_ray, out _hit, Mathf.Infinity, _layerMask))
                 {
                     //Берем компонент BuildPoint и определяем строить/улучшать
                     _currentPoint = _hit.transform.GetComponent<BuildPoint>();
